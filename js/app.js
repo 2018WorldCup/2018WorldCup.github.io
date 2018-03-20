@@ -14,6 +14,7 @@ App = {
 	    App.currentItemID = cItemID;
 	    if (typeof web3 !== 'undefined') {
             App.web3Provider = web3.currentProvider;
+			alert(web3.currentProvider);
         } else {
             // If no injected web3 instance is detected, fall back to Ganache
             App.web3Provider = new Web3.providers.HttpProvider('http://10.60.194.38:7545');//('http://localhost:7545');  ("http://10.60.194.38:7545")
