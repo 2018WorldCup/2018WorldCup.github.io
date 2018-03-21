@@ -188,7 +188,7 @@
   {
     "id": 23,
     "name": "Sweden",
-    "picture_guojia": "images/Sweden.png",
+    "picture_guojia": "images/Sweden.jpg",
     "picture": "images/Sweden_team.jpg",
     "age": 3,
     "breed": "Golden Retriever",
@@ -196,7 +196,7 @@
   },{
     "id": 24,
     "name": "Korea",
-    "picture_guojia": "images/Korea.png",
+    "picture_guojia": "images/Korea.jpg",
     "picture": "images/Korea_team.jpg",
     "age": 3,
     "breed": "Golden Retriever",
