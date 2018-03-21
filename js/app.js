@@ -7,19 +7,595 @@ App = {
     interfaceGraph: 1,
     currentItemID: 0,
     priceList: [4, 3, 2, 1, 4, 3, 2, 1, 4, 3, 2, 1, 4, 3, 2, 1, 4, 3, 2, 1, 4, 3, 2, 1, 4, 3, 2, 1, 4, 3, 2, 1],
+	cABI: [
+		  {
+			"constant": true,
+			"inputs": [],
+			"name": "name",
+			"outputs": [
+			  {
+				"name": "",
+				"type": "string"
+			  }
+			],
+			"payable": false,
+			"stateMutability": "pure",
+			"type": "function"
+		  },
+		  {
+			"constant": false,
+			"inputs": [
+			  {
+				"name": "_to",
+				"type": "address"
+			  },
+			  {
+				"name": "_tokenId",
+				"type": "uint256"
+			  }
+			],
+			"name": "approve",
+			"outputs": [],
+			"payable": false,
+			"stateMutability": "nonpayable",
+			"type": "function"
+		  },
+		  {
+			"constant": true,
+			"inputs": [],
+			"name": "ceoAddress",
+			"outputs": [
+			  {
+				"name": "",
+				"type": "address"
+			  }
+			],
+			"payable": false,
+			"stateMutability": "view",
+			"type": "function"
+		  },
+		  {
+			"constant": true,
+			"inputs": [],
+			"name": "implementsERC721",
+			"outputs": [
+			  {
+				"name": "",
+				"type": "bool"
+			  }
+			],
+			"payable": false,
+			"stateMutability": "pure",
+			"type": "function"
+		  },
+		  {
+			"constant": true,
+			"inputs": [],
+			"name": "totalSupply",
+			"outputs": [
+			  {
+				"name": "total",
+				"type": "uint256"
+			  }
+			],
+			"payable": false,
+			"stateMutability": "view",
+			"type": "function"
+		  },
+		  {
+			"constant": false,
+			"inputs": [
+			  {
+				"name": "_from",
+				"type": "address"
+			  },
+			  {
+				"name": "_to",
+				"type": "address"
+			  },
+			  {
+				"name": "_tokenId",
+				"type": "uint256"
+			  }
+			],
+			"name": "transferFrom",
+			"outputs": [],
+			"payable": false,
+			"stateMutability": "nonpayable",
+			"type": "function"
+		  },
+		  {
+			"constant": false,
+			"inputs": [
+			  {
+				"name": "_newCEO",
+				"type": "address"
+			  }
+			],
+			"name": "setCEO",
+			"outputs": [],
+			"payable": false,
+			"stateMutability": "nonpayable",
+			"type": "function"
+		  },
+		  {
+			"constant": false,
+			"inputs": [
+			  {
+				"name": "_newCOO",
+				"type": "address"
+			  }
+			],
+			"name": "setCOO",
+			"outputs": [],
+			"payable": false,
+			"stateMutability": "nonpayable",
+			"type": "function"
+		  },
+		  {
+			"constant": false,
+			"inputs": [
+			  {
+				"name": "_tokenId",
+				"type": "uint256"
+			  }
+			],
+			"name": "buyWorldCupTeamToken",
+			"outputs": [],
+			"payable": true,
+			"stateMutability": "payable",
+			"type": "function"
+		  },
+		  {
+			"constant": false,
+			"inputs": [],
+			"name": "payAllOut",
+			"outputs": [],
+			"payable": false,
+			"stateMutability": "nonpayable",
+			"type": "function"
+		  },
+		  {
+			"constant": true,
+			"inputs": [
+			  {
+				"name": "_tokenId",
+				"type": "uint256"
+			  }
+			],
+			"name": "ownerOf",
+			"outputs": [
+			  {
+				"name": "owner",
+				"type": "address"
+			  }
+			],
+			"payable": false,
+			"stateMutability": "view",
+			"type": "function"
+		  },
+		  {
+			"constant": true,
+			"inputs": [
+			  {
+				"name": "_owner",
+				"type": "address"
+			  }
+			],
+			"name": "balanceOf",
+			"outputs": [
+			  {
+				"name": "balance",
+				"type": "uint256"
+			  }
+			],
+			"payable": false,
+			"stateMutability": "view",
+			"type": "function"
+		  },
+		  {
+			"constant": false,
+			"inputs": [],
+			"name": "destroy",
+			"outputs": [],
+			"payable": false,
+			"stateMutability": "nonpayable",
+			"type": "function"
+		  },
+		  {
+			"constant": true,
+			"inputs": [
+			  {
+				"name": "_owner",
+				"type": "address"
+			  }
+			],
+			"name": "tokensOfOwner",
+			"outputs": [
+			  {
+				"name": "ownerTokens",
+				"type": "uint256[]"
+			  }
+			],
+			"payable": false,
+			"stateMutability": "view",
+			"type": "function"
+		  },
+		  {
+			"constant": true,
+			"inputs": [],
+			"name": "symbol",
+			"outputs": [
+			  {
+				"name": "",
+				"type": "string"
+			  }
+			],
+			"payable": false,
+			"stateMutability": "pure",
+			"type": "function"
+		  },
+		  {
+			"constant": false,
+			"inputs": [
+			  {
+				"name": "_to",
+				"type": "address"
+			  },
+			  {
+				"name": "_tokenId",
+				"type": "uint256"
+			  }
+			],
+			"name": "transfer",
+			"outputs": [],
+			"payable": false,
+			"stateMutability": "nonpayable",
+			"type": "function"
+		  },
+		  {
+			"constant": true,
+			"inputs": [],
+			"name": "cooAddress",
+			"outputs": [
+			  {
+				"name": "",
+				"type": "address"
+			  }
+			],
+			"payable": false,
+			"stateMutability": "view",
+			"type": "function"
+		  },
+		  {
+			"constant": false,
+			"inputs": [
+			  {
+				"name": "_tokenId",
+				"type": "uint256"
+			  }
+			],
+			"name": "takeOwnership",
+			"outputs": [],
+			"payable": false,
+			"stateMutability": "nonpayable",
+			"type": "function"
+		  },
+		  {
+			"constant": true,
+			"inputs": [
+			  {
+				"name": "_tokenId",
+				"type": "uint256"
+			  }
+			],
+			"name": "priceOf",
+			"outputs": [
+			  {
+				"name": "price",
+				"type": "uint256"
+			  }
+			],
+			"payable": false,
+			"stateMutability": "view",
+			"type": "function"
+		  },
+		  {
+			"constant": true,
+			"inputs": [],
+			"name": "getCEO",
+			"outputs": [
+			  {
+				"name": "ceoAddr",
+				"type": "address"
+			  }
+			],
+			"payable": false,
+			"stateMutability": "view",
+			"type": "function"
+		  },
+		  {
+			"constant": true,
+			"inputs": [],
+			"name": "getBonusPool",
+			"outputs": [
+			  {
+				"name": "",
+				"type": "uint256"
+			  }
+			],
+			"payable": false,
+			"stateMutability": "view",
+			"type": "function"
+		  },
+		  {
+			"constant": true,
+			"inputs": [
+			  {
+				"name": "",
+				"type": "uint256"
+			  }
+			],
+			"name": "worldCupIdToOwnerAddress",
+			"outputs": [
+			  {
+				"name": "",
+				"type": "address"
+			  }
+			],
+			"payable": false,
+			"stateMutability": "view",
+			"type": "function"
+		  },
+		  {
+			"constant": false,
+			"inputs": [
+			  {
+				"name": "_tokenId",
+				"type": "uint256"
+			  },
+			  {
+				"name": "descOfOwner",
+				"type": "string"
+			  }
+			],
+			"name": "setWorldCupTeamDesc",
+			"outputs": [],
+			"payable": false,
+			"stateMutability": "nonpayable",
+			"type": "function"
+		  },
+		  {
+			"constant": true,
+			"inputs": [
+			  {
+				"name": "_tokenId",
+				"type": "uint256"
+			  }
+			],
+			"name": "getWorlCupByID",
+			"outputs": [
+			  {
+				"name": "wctDesc",
+				"type": "string"
+			  },
+			  {
+				"name": "sellingPrice",
+				"type": "uint256"
+			  },
+			  {
+				"name": "owner",
+				"type": "address"
+			  }
+			],
+			"payable": false,
+			"stateMutability": "view",
+			"type": "function"
+		  },
+		  {
+			"constant": true,
+			"inputs": [
+			  {
+				"name": "",
+				"type": "uint256"
+			  }
+			],
+			"name": "worldCupIdToAddressForApproved",
+			"outputs": [
+			  {
+				"name": "",
+				"type": "address"
+			  }
+			],
+			"payable": false,
+			"stateMutability": "view",
+			"type": "function"
+		  },
+		  {
+			"constant": true,
+			"inputs": [],
+			"name": "getTimeFromPrize",
+			"outputs": [
+			  {
+				"name": "",
+				"type": "uint256"
+			  }
+			],
+			"payable": false,
+			"stateMutability": "view",
+			"type": "function"
+		  },
+		  {
+			"inputs": [],
+			"payable": false,
+			"stateMutability": "nonpayable",
+			"type": "constructor"
+		  },
+		  {
+			"anonymous": false,
+			"inputs": [
+			  {
+				"indexed": true,
+				"name": "curOwner",
+				"type": "address"
+			  },
+			  {
+				"indexed": true,
+				"name": "tokenId",
+				"type": "uint256"
+			  },
+			  {
+				"indexed": false,
+				"name": "oldPrice",
+				"type": "uint256"
+			  },
+			  {
+				"indexed": false,
+				"name": "newPrice",
+				"type": "uint256"
+			  },
+			  {
+				"indexed": true,
+				"name": "prevOwner",
+				"type": "address"
+			  },
+			  {
+				"indexed": false,
+				"name": "traddingTime",
+				"type": "uint256"
+			  }
+			],
+			"name": "WorldCupTokenWereSold",
+			"type": "event"
+		  },
+		  {
+			"anonymous": false,
+			"inputs": [
+			  {
+				"indexed": true,
+				"name": "toOwner",
+				"type": "address"
+			  },
+			  {
+				"indexed": true,
+				"name": "tokenId",
+				"type": "uint256"
+			  },
+			  {
+				"indexed": true,
+				"name": "traddingTime",
+				"type": "uint256"
+			  },
+			  {
+				"indexed": false,
+				"name": "remainingAmount",
+				"type": "uint256"
+			  }
+			],
+			"name": "ShareBonus",
+			"type": "event"
+		  },
+		  {
+			"anonymous": false,
+			"inputs": [
+			  {
+				"indexed": true,
+				"name": "fromAddress",
+				"type": "address"
+			  },
+			  {
+				"indexed": true,
+				"name": "toAddress",
+				"type": "address"
+			  },
+			  {
+				"indexed": false,
+				"name": "amount",
+				"type": "uint256"
+			  },
+			  {
+				"indexed": false,
+				"name": "presentTime",
+				"type": "uint256"
+			  }
+			],
+			"name": "Present",
+			"type": "event"
+		  },
+		  {
+			"anonymous": false,
+			"inputs": [
+			  {
+				"indexed": false,
+				"name": "from",
+				"type": "address"
+			  },
+			  {
+				"indexed": false,
+				"name": "to",
+				"type": "address"
+			  },
+			  {
+				"indexed": false,
+				"name": "tokenId",
+				"type": "uint256"
+			  }
+			],
+			"name": "Transfer",
+			"type": "event"
+		  },
+		  {
+			"anonymous": false,
+			"inputs": [
+			  {
+				"indexed": true,
+				"name": "owner",
+				"type": "address"
+			  },
+			  {
+				"indexed": true,
+				"name": "approved",
+				"type": "address"
+			  },
+			  {
+				"indexed": false,
+				"name": "tokenId",
+				"type": "uint256"
+			  }
+			],
+			"name": "Approval",
+			"type": "event"
+		  }
+		],
+	cAddress: "0x08CdCF9ba0a4b5667F5A59B78B60FbEFb145e64c",
 
     initWeb3: function(iGraphIndex, cItemID) {
         $.ajaxSettings.async = false;
 	    App.interfaceGraph = iGraphIndex;
 	    App.currentItemID = cItemID;
 	    if (typeof web3 !== 'undefined') {
-            App.web3Provider = web3.currentProvider;
-			alert(web3.currentProvider);
+            debugger;
+			App.web3Provider = web3.currentProvider;
+			//alert(web3.currentProvider);
         } else {
-            // If no injected web3 instance is detected, fall back to Ganache
-            App.web3Provider = new Web3.providers.HttpProvider('http://10.60.194.38:7545');//('http://localhost:7545');  ("http://10.60.194.38:7545")
+            $("footer").addClass("fixed-footer");
+			alert("Use the mist browser or install the metamask plug-in.");
+			$.ajaxSettings.async = true;
+			return;
+			// If no injected web3 instance is detected, fall back to Ganache
+            //App.web3Provider = new Web3.providers.HttpProvider('http://localhost:7545');//('http://localhost:7545');  ("http://10.60.194.38:7545")
         }
         web3 = new Web3(App.web3Provider);
+		// 合约地址
+		
+		// 通过ABI和地址获取已部署的合约对象
+		var metacoin = web3.eth.contract(App.cABI);//.at(address);
+		App.adoptionInstance = metacoin.at(App.cAddress);
+		App.adoptionInstance.getBonusPool(function(error, poolTotals){
+			//alert(poolTotals);
+			$('.navbar-right').eq(0).find('.pools').text(web3.fromWei(poolTotals.toNumber()));
+		});
+
 	    web3.eth.getAccounts(function(err, accs) {
 		    if (err != null) {
 		        alert("There was an error fetching your accounts.");
@@ -31,41 +607,28 @@ App = {
 		    }
 		    var accounts = accs;
 		    App.loginAccount = accounts[0];
-		    //alert(App.loginAccount);
-		    $.getJSON('WorldCupToken.json', function(data) {
-                // Get the necessary contract artifact file and instantiate it with truffle-contract
-                var AdoptionArtifact = data;
-                App.contracts.WorldCupToken = TruffleContract(AdoptionArtifact);
-                // Set the provider for our contract
-                App.contracts.WorldCupToken.setProvider(App.web3Provider);
-	            App.contracts.WorldCupToken.deployed().then(function(instance) {
-                    App.adoptionInstance = instance;
-			        App.adoptionInstance.getBonusPool.call().then(function(poolTotals){
-			            $('.navbar-right').eq(0).find('.pools').text(web3.fromWei(poolTotals.toNumber()));
-		            });
-		            if(App.interfaceGraph == 1){
-			            App.initMainPage();
-		            }else if(App.interfaceGraph == 2){		     
-				        App.initTeamPage(App.currentItemID, App.loginAccount);
-			            //alert(App.currentItemID, App.loginaccount);
-		            }else if(App.interfaceGraph == 3){		     
-				        App.initMyTeamPage();
-			            //alert(App.currentItemID, App.loginaccount);
-		            }else if(App.interfaceGraph == 8){
-				        App.initTraddingRecord(-1);
-			        }else if(App.interfaceGraph == 13){
-				       App.initPresentRecord();
-			        }
-                });
-            });
+			//alert(App.loginAccount);
+			if(App.interfaceGraph == 1){
+			    App.initMainPage();
+		    }else if(App.interfaceGraph == 2){		     
+				App.initTeamPage(App.currentItemID, App.loginAccount);
+			    //alert(App.currentItemID, App.loginaccount);
+		    }else if(App.interfaceGraph == 3){		     
+				App.initMyTeamPage();
+			    //alert(App.currentItemID, App.loginaccount);
+		    }else if(App.interfaceGraph == 8){
+				App.initTraddingRecord(-1);
+			}else if(App.interfaceGraph == 13){
+				App.initPresentRecord();
+			} 
         });
-    $.ajaxSettings.async = true;
+        $.ajaxSettings.async = true;
     //return App.initContract();
     },
 
     initMainPage: function(){
         function setAddrVal(itemID){
-	        App.adoptionInstance.getWorlCupByID.call(itemID).then(function(desc){
+	        App.adoptionInstance.getWorlCupByID(itemID, function(error,desc){
 			    var addrLen = desc[2].length;
 	            var showAddr = "";
 			    if(addrLen >= 20){
@@ -124,7 +687,7 @@ App = {
 		    petTemplate.find('img').attr('src', data[itemID].picture_guojia);
             petTemplate.find('.img-center-item').attr('src', data[itemID].picture);
 	    });
-	    App.adoptionInstance.getWorlCupByID.call(itemID).then(function(desc){
+	    App.adoptionInstance.getWorlCupByID(itemID, function(error, desc){
 			var petTemplate = $('#petItemTemplate');
 			var price = web3.fromWei(desc[1].toNumber());
 			var orgPrice = price;
@@ -168,7 +731,7 @@ App = {
 				console.log(error);
             }
             var account = accounts[0];
-	        return App.adoptionInstance.buyWorldCupTeamToken(itemID, {from: account, value: web3.toWei(price), gas:700000 }).then(function(){
+	        return App.adoptionInstance.buyWorldCupTeamToken(itemID, {from: account, value: web3.toWei(price), gas:700000 }, function(){
 				App.initTeamPage(itemID, account);
 				alert("If the page has not changed after the success of the change, please refresh the page or see if the transaction is successful.");
 		    });
@@ -209,7 +772,7 @@ App = {
 	
 	initMyTeamPage: function(){
 	    function setAddrVal(itemID, index){
-	        App.adoptionInstance.getWorlCupByID.call(itemID).then(function(desc){
+	        App.adoptionInstance.getWorlCupByID(itemID, function(error, desc){
 			    var addrLen = desc[2].length;
 	            var showAddr = "";
 			    if(addrLen >= 20){
@@ -236,7 +799,7 @@ App = {
                 console.log(error);
             }
             var account = accounts[0];
-	        App.adoptionInstance.tokensOfOwner.call(account).then(function(adopters){
+	        App.adoptionInstance.tokensOfOwner(account, function(error, adopters){
 		        if(adopters.length>4){
 					$("footer").removeClass("fixed-footer");
 				}else{
@@ -282,7 +845,7 @@ App = {
 				console.log(error);
 			}
 			var account = accounts[0];
-			App.adoptionInstance.getCEO.call().then(function(ceoAddr){
+			App.adoptionInstance.getCEO(function(error, ceoAddr){
 				if(account == ceoAddr){
 					return adoptionInstance.payout(account, {from: account, gas:300000 });//web3.eth.gasPrice
 				}else{
