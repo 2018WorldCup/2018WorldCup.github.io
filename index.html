@@ -4,10 +4,10 @@
         <script language="javascript" type="text/javascript" src="js/head.js"></script>
     </head>
     <body>    
-		<div class="container clear-padding">
+		<div class="container">
 			<div class="row clearfix" id="navID">
 			</div>
-			<div id="gamerule" class="jumbotron" style="height:150px;padding:15px 100px 30px 30px;margin-top:90px;background:url(images/bk_log.jpg) no-repeat right top;"><!--background-color:#ffff80;png-->
+			<div id="gamerule" class="jumbotron" style="height:150px;padding:15px 100px 30px 30px;margin-top:70px;background:url(images/bk_log.jpg) no-repeat right top;"><!--background-color:#ffff80;png--><!--fixed center center no-repeat;-->
 						<!--<h3>-->
 							<p style="font-size:28px;"><strong>Grab your favorite team, cheer for it and <span style="color:#FF0000">get the bonus!</span><span style="font-size:18px;"><a class="pet1-href" href="FAQ.html"> >>more info</a></span></strong></p>
 						<!--</h3>-->
@@ -50,7 +50,7 @@
 			  </div>
 			</div>
 		</div>
-		<footer class="myfooter fixed-footer">
+		<footer class="myfooter">
         <div class="copyright">
             <p>Copyright 2018 &copy; WorldCup</p> <!--<img src="images/footer.jpg" />-->
         </div>
@@ -66,14 +66,14 @@
 	<script src="js/nav.js"></script>
 	<script type="text/javascript">
 		$(function() {
-			nav.createNav("navID");
+			nav.createNav("navID", 0);
 			$(window).load(function() {
 				//$("#page1").load("nav.html");
 				App.initWeb3(1, 0);//init();
 				//$("footer").removeClass("fixed-footer");
 			});
 
-			function footerPosition(){
+			/*function footerPosition(){
 			  //$("footer").removeClass("fixed-footer");
 			  var contentHeight = document.body.scrollHeight,//网页正文全文高度
 				  winHeight = window.innerHeight;//可视窗口高度，不包括浏览器顶部工具栏
@@ -87,7 +87,7 @@
 			  }
 			}
 			footerPosition();
-			$(window).resize(footerPosition);
+			$(window).resize(footerPosition);*/
 		});
 	</script>
 	</body>

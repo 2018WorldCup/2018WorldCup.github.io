@@ -7,7 +7,7 @@
 		<div class="container clear-padding">
 			<div class="row clearfix" id="navID">
 			</div>
-			<div id="petsRow" class="row" style="margin-top:110px;">
+			<div id="petsRow" class="row" style="margin-top:70px;">
 				<!-- PETS LOAD HERE -->
 			</div>
 			<div id="petTemplate" style="display: none;">
@@ -49,7 +49,7 @@
 	<script src="js/nav.js"></script>
 	<script type="text/javascript">
 		$(function() {
-			nav.createNav("navID");
+			nav.createNav("navID", 1);
 			$(window).load(function() {
 				//$("#page1").load("nav.html");
 				App.initWeb3(3, 0);//init();
