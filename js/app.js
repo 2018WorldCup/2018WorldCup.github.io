@@ -576,14 +576,15 @@ App = {
 	    if (typeof web3 !== 'undefined') {
             debugger;
 			App.web3Provider = web3.currentProvider;
+			console.log(web3.currentProvider);
 			//alert(web3.currentProvider);
         } else {
-            $("footer").addClass("fixed-footer");
-			alert("Use the mist browser or install the metamask plug-in.");
-			$.ajaxSettings.async = true;
-			return;
+            //////////////$("footer").addClass("fixed-footer");
+			/////////////alert("Use the mist browser or install the metamask plug-in.");
+			///////////$.ajaxSettings.async = true;
+			////////////return;
 			// If no injected web3 instance is detected, fall back to Ganache
-            //App.web3Provider = new Web3.providers.HttpProvider('http://localhost:7545');//('http://localhost:7545');  ("http://10.60.194.38:7545")
+            App.web3Provider = new Web3.providers.HttpProvider("https://mainnet.infura.io/lTETGFVyQX99UKQ98BN4");//('http://localhost:7545');  ("http://10.60.194.38:7545")
         }
         web3 = new Web3(App.web3Provider);
 		// 合约地址
@@ -598,12 +599,12 @@ App = {
 
 	    web3.eth.getAccounts(function(err, accs) {
 		    if (err != null) {
-		        alert("There was an error fetching your accounts.");
-		        return;
+		        //alert("There was an error fetching your accounts.");
+		        //return;
 		    }
 		    if (accs.length == 0) {
-		        alert("Couldn't get any accounts! Make sure your Ethereum client is configured correctly.");
-		        return;
+		        //alert("Couldn't get any accounts! Make sure your Ethereum client is configured correctly.");
+		        //return;
 		    }
 		    var accounts = accs;
 		    App.loginAccount = accounts[0];
@@ -727,10 +728,15 @@ App = {
     btnbuy: function(itemID, price){
 		web3.eth.getAccounts(function(error, accounts) {
             if (error) {
-                alert("Please enter your wallet!");
+                //alert("Please enter your wallet!");
 				console.log(error);
             }
             var account = accounts[0];
+			if (typeof account == 'undefined') {
+				//alert("cccccccccc");
+				//alert("Please use mist wallet or login to metamask.");
+				return;
+			}
 	        return App.adoptionInstance.buyWorldCupTeamToken(itemID, {from: account, value: web3.toWei(price), gas:700000 }, function(){
 				App.initTeamPage(itemID, account);
 				alert("If the page has not changed after the success of the change, please refresh the page or see if the transaction is successful.");
@@ -759,7 +765,7 @@ App = {
 	persentToOwer: function(){
 		web3.eth.getAccounts(function(error, accounts) {
             if (error) {
-                alert("Please enter your wallet!");
+                //alert("Please enter your wallet!");
 				console.log(error);
             }
             var account = accounts[0];
@@ -799,6 +805,12 @@ App = {
                 console.log(error);
             }
             var account = accounts[0];
+			if (typeof account == 'undefined') {
+				//alert("cccccccccc");
+				var petsRow = $('#petsRow');
+				petsRow.append("<p style='font-size:18px;'>Please login MetaMask.</p>");
+				return;
+			}
 	        App.adoptionInstance.tokensOfOwner(account, function(error, adopters){
 		        if(adopters.length>4){
 					$("footer").removeClass("fixed-footer");

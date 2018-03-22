@@ -15,7 +15,7 @@ nav = {
 					+ '				 <a href="myteam.html" style="cursor:pointer;font-size:18px;height:25px;line-height:25px;"><img alt="Brand" height="15px" src="images/football.jpg"/><strong>My Team</strong></a>'
 					+ '			</li>'
 					+ '			<li>'
-					+ '				 <a href="tradding.html" style="cursor:pointer;font-size:18px;height:25px;line-height:25px;"><img alt="Brand" height="15px" src="images/football.jpg"/><strong>Tradding Record</strong></a><!--Trading Record-->'
+					+ '				 <a href="tradding.html" style="cursor:pointer;font-size:18px;height:25px;line-height:25px;"><img alt="Brand" height="15px" src="images/football.jpg"/><strong>Trading Record</strong></a><!--Trading Record-->'
 					+ '			</li>'
 					+ '			<li>'
 					+ '				 <a href="FAQ.html" style="cursor:pointer;font-size:18px;height:25px;line-height:25px;"><img alt="Brand" height="15px" src="images/football.jpg"/><strong>FAQ</strong></a><!--Trading Record-->'
