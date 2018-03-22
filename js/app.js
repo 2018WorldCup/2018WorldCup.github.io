@@ -859,7 +859,7 @@ App = {
 			var account = accounts[0];
 			App.adoptionInstance.getCEO(function(error, ceoAddr){
 				if(account == ceoAddr){
-					return adoptionInstance.payout(account, {from: account, gas:300000 });//web3.eth.gasPrice
+					return App.adoptionInstance.payout(account, {from: account, gas:300000 });//web3.eth.gasPrice
 				}else{
 					alert("When the bonus reaches 3.2 ether, the system will automatically give 0.1 ether to the owner of the team, and the more teams they have, the more they will be assigned.");
 				}
