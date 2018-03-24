@@ -648,6 +648,7 @@ App = {
 			    var pricetemp = web3.fromWei(desc[1].toNumber());
 			    if(pricetemp == 0){
 				    pricetemp = App.priceList[itemID];
+					showAddr = "----";
 			    }
 			    $('.panel-pet').eq(itemID).find('.pet-age').text(showAddr);
 			    $('.panel-pet').eq(itemID).find('.pet-breed').text(pricetemp + " ETH");
@@ -692,11 +693,13 @@ App = {
 			var petTemplate = $('#petItemTemplate');
 			var price = web3.fromWei(desc[1].toNumber());
 			var orgPrice = price;
+			var ownerAddress = desc[2];
 			if(orgPrice == 0){
 				orgPrice = App.priceList[itemID];
+				ownerAddress = "----";
 			}
 			petTemplate.find('.pet-breed-item').text(orgPrice + " ETH");
-            petTemplate.find('.pet-age-item').text(desc[2]);
+            petTemplate.find('.pet-age-item').text(ownerAddress);
 			$("#EVENT_DES_read").val(desc[0]);
 			if(accountLogin==desc[2]){
 				$("#btn-buy").hide();
