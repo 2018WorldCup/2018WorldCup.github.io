@@ -584,7 +584,7 @@ App = {
 			///////////$.ajaxSettings.async = true;
 			////////////return;
 			// If no injected web3 instance is detected, fall back to Ganache
-            App.web3Provider = new Web3.providers.HttpProvider("https://mainnet.infura.io/lTETGFVyQX99UKQ98BN4");//('http://localhost:7545');  ("http://10.60.194.38:7545")
+            App.web3Provider = new Web3.providers.HttpProvider("https://mainnet.infura.io/Zu3izefIcguwWWFPhy55");//('http://localhost:7545');  ("http://10.60.194.38:7545")
         }
         web3 = new Web3(App.web3Provider);
 		// 合约地址
