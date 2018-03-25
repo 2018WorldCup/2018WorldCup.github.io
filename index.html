@@ -54,9 +54,7 @@
 			</div>
 		</div>
 		<footer class="myfooter">
-        <div class="copyright">
-            <p>Copyright 2018 &copy; WorldCup</p> <!--<img src="images/footer.jpg" />-->
-        </div>
+        <div id="myfooterDiv"></div>
 		</footer>
 	<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
@@ -67,9 +65,11 @@
     <script src="js/truffle-contract.js"></script>
     <script src="js/app.js"></script>
 	<script src="js/nav.js"></script>
+	<script src="js/footer.js"></script>
 	<script type="text/javascript">
 		$(function() {
 			nav.createNav("navID", 0);
+			footdiv.createFootDiv("myfooterDiv");
 			$(window).load(function() {
 				//$("#page1").load("nav.html");
 				App.initWeb3(1, 0);//init();

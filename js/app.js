@@ -639,8 +639,8 @@ App = {
 			    }
 			    addrLen = desc[0].length;
 	            var showDesc = "";
-			    if(addrLen >= 17){
-				    showDesc = desc[0].substring(0, 17) + "...";
+			    if(addrLen >= 18){
+				    showDesc = desc[0].substring(0, 18) + "...";
 			    }else{
 				    showDesc = desc[0];
 			    }
@@ -757,7 +757,7 @@ App = {
 			        console.log(error);
 		        }
 		        var account = accounts[0];
-		        App.adoptionInstance.setWorldCupTeamDesc(itemID, desc, {from: account, gas:300000 },function(){
+		        App.adoptionInstance.setWorldCupTeamDesc(itemID, desc, {from: account, gas:300000 }, function(){
 				    App.initTeamPage(itemID, account);
 				    alert("If the page has not changed after the success of the change, please refresh the page or see if the transaction is successful.");
 		        });//web3.eth.gasPrice

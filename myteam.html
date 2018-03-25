@@ -34,9 +34,7 @@
 			</div>
 		</div>
 		<footer class="myfooter fixed-footer">
-        <div class="copyright"><!--<p>Exceptional address: 0x0000000000000000</p>-->
-            <p>Copyright 2018 &copy; WorldCup</p> <!--<img src="images/footer.jpg" />-->
-        </div>
+        <div id="myfooterDiv"></div>
 		</footer>
 	<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
@@ -47,13 +45,31 @@
     <script src="js/truffle-contract.js"></script>
     <script src="js/app.js"></script>
 	<script src="js/nav.js"></script>
+	<script src="js/footer.js"></script>
 	<script type="text/javascript">
 		$(function() {
 			nav.createNav("navID", 1);
+			footdiv.createFootDiv("myfooterDiv");
 			$(window).load(function() {
 				//$("#page1").load("nav.html");
 				App.initWeb3(3, 0);//init();
 			});
+			
+			/*function footerPosition(){
+			  $("footer").removeClass("fixed-footer");
+			  var contentHeight = document.body.scrollHeight,//网页正文全文高度
+				  winHeight = window.innerHeight;//可视窗口高度，不包括浏览器顶部工具栏
+			  if(!(contentHeight > winHeight)){
+				  //当网页正文高度小于可视窗口高度时，为footer添加类fixed-footer
+				  $("footer").removeClass("fixed-footer");
+			  } else {
+				  //$("footer").removeClass("fixed-footer");
+				  $("footer").addClass("fixed-footer");
+				  $(".content").height(winHeight);
+			  }
+			}
+			footerPosition();
+			$(window).resize(footerPosition);*/
 		});
 	</script>
 	</body>

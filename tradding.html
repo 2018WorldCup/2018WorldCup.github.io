@@ -59,9 +59,7 @@
 			</div>
 		</div>
 		<footer class="myfooter fixed-footer">
-        <div class="copyright">
-            <p>Copyright 2018 &copy; WorldCup</p> <!--<img src="images/footer.jpg" />-->
-        </div>
+        <div id="myfooterDiv"></div>
 		</footer>
 		<!--<footer class="footer">
 			<div class="foot" style="text-align:center;height:100px;background-color:#E7E7E7;float:bottom;">
@@ -91,9 +89,11 @@
     <script src="js/truffle-contract.js"></script>
     <script src="js/app.js"></script>
 	<script src="js/nav.js"></script>
+	<script src="js/footer.js"></script>
 	<script type="text/javascript">
 		$(function() {
 			nav.createNav("navID", 2);
+			footdiv.createFootDiv("myfooterDiv");
 			//$('#traddingTable').dataTable();
 			$(window).load(function() {
 				//$("#page1").load("nav.html");
