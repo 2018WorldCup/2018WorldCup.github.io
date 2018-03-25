@@ -757,7 +757,7 @@ App = {
 			        console.log(error);
 		        }
 		        var account = accounts[0];
-		        App.adoptionInstance.setWorldCupTeamDesc(itemID, desc, {from: account, gas:300000 }).then(function(){
+		        App.adoptionInstance.setWorldCupTeamDesc(itemID, desc, {from: account, gas:300000 },function(){
 				    App.initTeamPage(itemID, account);
 				    alert("If the page has not changed after the success of the change, please refresh the page or see if the transaction is successful.");
 		        });//web3.eth.gasPrice
