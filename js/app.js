@@ -908,6 +908,8 @@ App = {
 						web3.fromWei(result.args.newPrice)+' ETH',
 						timestampToTime(result.args.traddingTime)
 					] ).draw();
+					$("#hellocenter").hide();
+		            $("#hellocenter2").show();
 					//alert("ss");
 				    //code = '<tr><td class="center" style="height:25px;"><img height="25px" src="'+tokenName+'"/></td><td class="center">'+data[tokenID].name+'</td><td class="center">'+result.args.curOwner+'</td><td class="center">'+web3.fromWei(result.args.newPrice)+' ETH</td><td class="center">'+timestampToTime(result.args.traddingTime)+'</td></tr>' + code;
 				    //console.log(result);
@@ -915,6 +917,8 @@ App = {
 				    console.log(err);
 			    }
 			    //div1.innerHTML = code;
+				$("#hellocenter").hide();
+		        $("#hellocenter2").show();
 			    myEvent.stopWatching();
 			    
 		    });
