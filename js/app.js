@@ -639,8 +639,8 @@ App = {
 			    }
 			    addrLen = desc[0].length;
 	            var showDesc = "";
-			    if(addrLen >= 20){
-				    showDesc = desc[0].substring(0, 20) + "...";
+			    if(addrLen >= 15){
+				    showDesc = desc[0].substring(0, 15) + "...";
 			    }else{
 				    showDesc = desc[0];
 			    }
