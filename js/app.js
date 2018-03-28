@@ -673,6 +673,7 @@ App = {
 				petTemplate.find('.pet-href').attr('href', clicksrc);
 				petsRow.append(petTemplate.html());
 			}
+			$("#indexPageID").removeClass("fixed-footer");
 		}).then(function(){
 			for (var i = 0; i < App.tokenCount; i++) {
 				setAddrVal(i);
@@ -886,6 +887,8 @@ App = {
             return Y+M+D+h+m+s;
         }
 		
+		//$("footer").addClass("fixed-footer");
+		
 		$.getJSON('../pets.json', function(data) {
 			// 获取事件对象
 		    var myEvent = App.adoptionInstance.WorldCupTokenWereSold(tokenIDS, {fromBlock: 0, toBlock: 'latest'});//{curOwner: App.loginaccount}, 'latest'
@@ -910,6 +913,7 @@ App = {
 					] ).draw();
 					$("#hellocenter").hide();
 		            $("#hellocenter2").show();
+					$("#traddingPageID").removeClass("fixed-footer");
 					//alert("ss");
 				    //code = '<tr><td class="center" style="height:25px;"><img height="25px" src="'+tokenName+'"/></td><td class="center">'+data[tokenID].name+'</td><td class="center">'+result.args.curOwner+'</td><td class="center">'+web3.fromWei(result.args.newPrice)+' ETH</td><td class="center">'+timestampToTime(result.args.traddingTime)+'</td></tr>' + code;
 				    //console.log(result);
@@ -919,6 +923,7 @@ App = {
 			    //div1.innerHTML = code;
 				$("#hellocenter").hide();
 		        $("#hellocenter2").show();
+				$("#traddingPageID").removeClass("fixed-footer");
 			    myEvent.stopWatching();
 			    
 		    });

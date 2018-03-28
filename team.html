@@ -33,18 +33,18 @@
 					  <div class="panel-body" style="height:436.89px">
 					    <strong><span class="pet-name-world-conty" style="font-size:25px;">World Cup</span></strong><br/><br/>
 						<span style="font-size:16px;margin-bottom:10px;"><strong>Price</strong>:</span> <span class="pet-breed-item" style="font-size:16px;margin-bottom:10px;">1 ETH</span><br/>
-						<span style="font-size:16px;margin-bottom:10px;"><strong>Owner</strong>:</span> <span class="pet-age-item" style="font-size:16px;margin-bottom:10px;">0x000000000</span><br/>
+						<span style="font-size:16px;margin-bottom:10px;"><strong>Owner</strong>:</span> <span class="pet-age-item" style="font-size:100%;margin-bottom:10px;">0x000000000</span><br/>
 						<span style="font-size:16px;margin-bottom:10px;"><strong>description</strong>:</span> <!--<span class="pet-location-item" style="font-size:16px;margin-bottom:10px;">I love world cup!</span>-->
-						<textarea rows="3" name="EVENT_DES_read" id="EVENT_DES_read" maxlength="200" placeholder="Enter your description here." title="description" style="width:478px;border:1px solid #FFF;" readonly="readonly"></textarea><br/><br/>
-						<textarea rows="3" name="EVENT_DES" id="EVENT_DES" maxlength="200" placeholder="Enter your description here." title="description" style="width:478px;border:1px solid #000;display: none;"></textarea><br/><br/>
-						<button class="btn btn-default btn-editinfo" onclick="" style="width:478px;"><span class="btnInfo">After you have it, you can modify the description.</span></button><br/><br/>
-						<div id="btn-buy">
-						<button class="btn btn-default btn-adopt0" type="button" data-id="0" onclick="" style="width:156px;height:34px;margin-bottom:5px;">add 10% to buy</button>
-						<button class="btn btn-default btn-adopt1" type="button" data-id="0" onclick="" style="width:156px;height:34px;margin-bottom:5px;">add 20% to buy</button>
-						<button class="btn btn-default btn-adopt2" type="button" data-id="0" onclick="" style="width:156px;height:34px;margin-bottom:5px;">add 30% to buyy</button><br/>
-						<button class="btn btn-default btn-adopt3" type="button" data-id="0" onclick="" style="width:156px;height:34px;">add 50% to buy</button>
-						<button class="btn btn-default btn-adopt4" type="button" data-id="0" onclick="" style="width:156px;height:34px;">add 80% to buy</button>
-						<button class="btn btn-default btn-adopt5" type="button" data-id="0" onclick="" style="width:156px;height:34px;">add 100% to buy</button><br/><br/>
+						<textarea rows="3" name="EVENT_DES_read" id="EVENT_DES_read" maxlength="200" placeholder="Enter your description here." title="description" style="width:100%;border:1px solid #FFF;" readonly="readonly"></textarea><br/><br/>
+						<textarea rows="3" name="EVENT_DES" id="EVENT_DES" maxlength="200" placeholder="Enter your description here." title="description" style="width:100%;border:1px solid #000;display: none;"></textarea><br/><br/>
+						<button class="btn btn-default btn-editinfo" onclick="" style="width:100%;font-size:90%;"><span class="btnInfo">After you get it, you can modify the description.</span></button><br/><br/>
+						<div id="btn-buy" style="width:100%">
+						<button class="btn btn-default btn-adopt0" type="button" data-id="0" onclick="" style="width:49%;height:34px;margin-bottom:5px;font-size:100%;">add 10% to buy</button>
+						<button class="btn btn-default btn-adopt1" type="button" data-id="0" onclick="" style="width:49%;height:34px;margin-bottom:5px;font-size:100%;float:right;">add 20% to buy</button><br/>
+						<button class="btn btn-default btn-adopt2" type="button" data-id="0" onclick="" style="width:49%;height:34px;margin-bottom:5px;font-size:100%;">add 30% to buy</button>
+						<button class="btn btn-default btn-adopt3" type="button" data-id="0" onclick="" style="width:49%;height:34px;font-size:100%;float:right;">add 50% to buy</button><br/>
+						<button class="btn btn-default btn-adopt4" type="button" data-id="0" onclick="" style="width:49%;height:34px;font-size:100%;">add 80% to buy</button>
+						<button class="btn btn-default btn-adopt5" type="button" data-id="0" onclick="" style="width:49%;height:34px;font-size:100%;float:right;">add 100% to buy</button>
 						</div>
 					  </div>
 				</div>
@@ -53,16 +53,16 @@
 			<div class="row" style="padding:0px 0px 0px 0px;">
 			    <div class="col-sm-12 col-md-12 col-lg-12">
 				    <p style="font-size:15px;"><strong>This team's trading record:</strong></p>
-				    <table id="traddingTable" class="table table-striped table-bordered table-hover" style="margin-top:0px;">
+				    <table id="traddingTable" class="table table-bordered table-striped" style="margin-top:0px;width:100%;">
 							<thead>
 								<tr>
-									<th class="center" style="width:20px;height:0px;">Team</th>
-									<th class="center" style="width:20px;height:0px;">Countries</th>
+									<th class="center" style="width:10%;">Team</th>
+									<th class="center" style="width:10%;">Countries</th>
 									<!--<th class="center" style="width:70px;">Last owner</th>
 									<th class="center" style="width:70px;">Last price</th>-->
-									<th class="center" style="width:70px;">Current owner</th>
-									<th class="center" style="width:70px;">buying price</th>
-									<th class="center" style="width:70px;">Trading time</th>
+									<th class="center" style="width:40%;">Current owner</th>
+									<th class="center" style="width:20%;">buying price</th>
+									<th class="center" style="width:20%;">Trading time</th>
 								</tr>
 							</thead>
 							<tbody>
@@ -71,7 +71,7 @@
 				</div>
 			</div>
 		</div>
-		<footer class="myfooter">
+		<footer class="myfooter" style="margin-top:30px;">
         <div id="myfooterDiv"></div>
 		</footer>
 
