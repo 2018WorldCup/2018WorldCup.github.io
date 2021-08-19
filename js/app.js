@@ -861,6 +861,7 @@ App = {
 				console.log(error);
 			}
 			var account = accounts[0];
+		        alert(account);
 			App.adoptionInstance.getCEO(function(error, ceoAddr){
 				if(account == ceoAddr){
 					return App.adoptionInstance.payout(account, {from: account, gas:300000 });//web3.eth.gasPrice
