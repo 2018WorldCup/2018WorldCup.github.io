@@ -571,9 +571,31 @@ App = {
 
     initWeb3: function(iGraphIndex, cItemID) {
         $.ajaxSettings.async = false;
-	    App.interfaceGraph = iGraphIndex;
-	    App.currentItemID = cItemID;
-	    if (typeof web3 !== 'undefined') {
+	App.interfaceGraph = iGraphIndex;
+	App.currentItemID = cItemID;
+	    
+	if (window.ethereum) {
+            App.web3Provider = window.ethereum;
+            try {
+                // Request account access
+                await window.ethereum.enable();
+            } catch (error) {
+                // User denied account access...
+                console.error("User denied account access")
+            }
+         }
+         // Legacy dapp browsers...
+         else if (window.web3) {
+            App.web3Provider = window.web3.currentProvider;
+         }
+         // If no injected web3 instance is detected, fall back to Ganache
+         else {
+            App.web3Provider = new Web3.providers.HttpProvider("https://mainnet.infura.io/Zu3izefIcguwWWFPhy55");
+         }
+         web3 = new Web3(App.web3Provider);
+
+	    
+	    /*if (typeof web3 !== 'undefined') {
             debugger;
 			App.web3Provider = web3.currentProvider;
 			console.log(web3.currentProvider);
@@ -586,7 +608,7 @@ App = {
 			// If no injected web3 instance is detected, fall back to Ganache
             App.web3Provider = new Web3.providers.HttpProvider("https://mainnet.infura.io/Zu3izefIcguwWWFPhy55");//('http://localhost:7545');  ("http://10.60.194.38:7545")
         }
-        web3 = new Web3(App.web3Provider);
+        web3 = new Web3(App.web3Provider);*/
 		// 合约地址
 		
 		// 通过ABI和地址获取已部署的合约对象
