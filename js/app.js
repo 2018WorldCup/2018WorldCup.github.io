@@ -839,7 +839,8 @@ App = {
 				return;
 			}
 	        App.adoptionInstance.tokensOfOwner(account, function(error, adopters){
-		        if(adopters.length>4){
+		        alert(adopters.length);
+			if(adopters.length>4){
 					$("footer").removeClass("fixed-footer");
 				}else{
 					$("footer").addClass("fixed-footer");
