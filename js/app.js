@@ -838,6 +838,7 @@ App = {
 				petsRow.append("<p style='font-size:18px;'>Please login MetaMask.</p>");
 				return;
 			}
+		alert(account);
 	        App.adoptionInstance.tokensOfOwner(account, function(error, adopters){
 		        alert(adopters.length);
 			if(adopters.length>4){
