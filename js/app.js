@@ -569,7 +569,7 @@ App = {
 		],
 	cAddress: "0x08CdCF9ba0a4b5667F5A59B78B60FbEFb145e64c",
 
-    initWeb3: function(iGraphIndex, cItemID) {
+    initWeb3: async function(iGraphIndex, cItemID) {
         $.ajaxSettings.async = false;
 	App.interfaceGraph = iGraphIndex;
 	App.currentItemID = cItemID;
