@@ -805,7 +805,7 @@ App = {
 	
 	initMyTeamPage: function(){
 	    function setAddrVal(itemID, index){
-	        App.adoptionInstance.getWorlCupByID(6, function(error, desc){
+	        App.adoptionInstance.getWorlCupByID(itemID, function(error, desc){
 			    var addrLen = desc[2].length;
 	            var showAddr = "";
 			    if(addrLen >= 20){
@@ -871,8 +871,8 @@ App = {
 							petTemplate.find('.pet-href-pic').attr('href', clicksrc);
 							petTemplate.find('.pet-href').attr('href', clicksrc);
 							petsRow.append(petTemplate.html());
-							alert(adopters[i]);
-							setAddrVal(adopters[i], i);
+							//alert(adopters[i]);
+							setAddrVal(adopters[i].toNumber(), i);
 						}
 					});
 				}
