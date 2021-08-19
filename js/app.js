@@ -872,7 +872,7 @@ App = {
 							petTemplate.find('.pet-href').attr('href', clicksrc);
 							petsRow.append(petTemplate.html());
 							alert(adopters[i]);
-							setAddrVal(adopters[i].id, i);
+							setAddrVal(adopters[i], i);
 						}
 					});
 				}
