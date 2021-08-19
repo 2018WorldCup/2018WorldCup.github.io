@@ -631,7 +631,7 @@ App = {
 		    }
 		    var accounts = accs;
 		    App.loginAccount = accounts[0];
-			alert(App.loginAccount);
+			//alert(App.loginAccount);
 			if(App.interfaceGraph == 1){
 			    App.initMainPage();
 		    }else if(App.interfaceGraph == 2){		     
