@@ -803,9 +803,9 @@ App = {
         });
     },
 	
-	initMyTeamPage: async function(){
+	initMyTeamPage: function(){
 	    function setAddrVal(itemID, index){
-	        await App.adoptionInstance.getWorlCupByID(itemID, function(error, desc){
+	         App.adoptionInstance.getWorlCupByID(itemID, function(error, desc){
 			    var addrLen = desc[2].length;
 	            var showAddr = "";
 			    if(addrLen >= 20){
@@ -822,6 +822,7 @@ App = {
 			    }
 			
 			    $('.panel-pet').eq(index).find('.pet-age').text(showAddr);
+			    alert(web3.fromWei(desc[1].toNumber()));
 			    $('.panel-pet').eq(index).find('.pet-breed').text(web3.fromWei(desc[1].toNumber()) + " ETH");
 			    $('.panel-pet').eq(index).find('.pet-location').text(showDesc);
 		    });
