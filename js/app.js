@@ -822,7 +822,7 @@ App = {
 			    }
 			
 			    $('.panel-pet').eq(index).find('.pet-age').text(showAddr);
-			    alert(web3.fromWei(desc[1].toNumber()));
+			    alert(desc[1].toNumber());
 			    $('.panel-pet').eq(index).find('.pet-breed').text(web3.fromWei(desc[1].toNumber()) + " ETH");
 			    $('.panel-pet').eq(index).find('.pet-location').text(showDesc);
 		    });
