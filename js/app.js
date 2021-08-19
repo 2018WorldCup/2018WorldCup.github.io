@@ -577,7 +577,7 @@ App = {
             debugger;
 			App.web3Provider = web3.currentProvider;
 			console.log(web3.currentProvider);
-			//alert(web3.currentProvider);
+			alert(web3.currentProvider);
         } else {
             //////////////$("footer").addClass("fixed-footer");
 			/////////////alert("Use the mist browser or install the metamask plug-in.");
