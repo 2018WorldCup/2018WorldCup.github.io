@@ -805,7 +805,7 @@ App = {
 	
 	initMyTeamPage: function(){
 	    function setAddrVal(itemID, index){
-	        App.adoptionInstance.getWorlCupByID(itemID, function(error, desc){
+	        App.adoptionInstance.getWorlCupByID(6, function(error, desc){
 			    var addrLen = desc[2].length;
 	            var showAddr = "";
 			    if(addrLen >= 20){
