@@ -805,7 +805,8 @@ App = {
 	
 	initMyTeamPage: function(){
 	    function setAddrVal(itemID, index){
-	         App.adoptionInstance.getWorlCupByID(itemID, function(error, desc){
+	            //alert(itemID);
+		    App.adoptionInstance.getWorlCupByID(itemID, function(error, desc){
 			    var addrLen = desc[2].length;
 	            var showAddr = "";
 			    if(addrLen >= 20){
@@ -822,8 +823,13 @@ App = {
 			    }
 			
 			    $('.panel-pet').eq(index).find('.pet-age').text(showAddr);
-			    alert(desc[1].toNumber());
-			    $('.panel-pet').eq(index).find('.pet-breed').text(web3.fromWei(desc[1].toNumber()) + " ETH");
+			    //alert(desc[1].toNumber());
+			    var pricetemp = web3.fromWei(desc[1].toNumber());
+			    if(pricetemp == 0){
+				    pricetemp = App.priceList[itemID];
+					showAddr = "----";
+			    }
+			    $('.panel-pet').eq(index).find('.pet-breed').text(pricetemp + " ETH");
 			    $('.panel-pet').eq(index).find('.pet-location').text(showDesc);
 		    });
 	    }
@@ -839,9 +845,9 @@ App = {
 				petsRow.append("<p style='font-size:18px;'>Please login MetaMask.</p>");
 				return;
 			}
-		alert(account);
+		//alert(account);
 	        App.adoptionInstance.tokensOfOwner(account, function(error, adopters){
-		        alert(adopters.length);
+		        //alert(adopters.length);
 			if(adopters.length>4){
 					$("footer").removeClass("fixed-footer");
 				}else{
